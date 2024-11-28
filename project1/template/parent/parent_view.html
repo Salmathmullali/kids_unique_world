@@ -1,0 +1,50 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+{% load static %}
+
+<h1>HI</h1>
+<div style="width:700px; justify-content:center;align-item:center; ">
+            <div class="mb-3">
+                <label class="img-rounded"><b>Profile</b></label><br>
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Id</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{users.reg_id}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Name</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{users.firstname}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Phone Number</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{users.lastname}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{users.address}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Password</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="password" value="{{users.password}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Password</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{users.phone}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Password</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="email" value="{{users.email}}">
+            </div>
+
+            <div class="mb-3">
+                <a class="btn btn-outline-success mx-auto d-grid gap-2 col-6"
+                   href="{% url 'parent_edit' login_id %}"> Edit</a>
+            </div>
+</div>
+{% endblock content %}

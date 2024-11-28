@@ -1,0 +1,64 @@
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--{% for video in users %}-->
+<!--    <h1>Video Player</h1>-->
+<!--    <video width="400" height="260" controls>-->
+<!--    <source src="{{ video.upload_videos.url }}" type="video/mp4">-->
+<!--    Your browser does not support the video tag.-->
+<!--</video>-->
+<!--    <br>-->
+<!--    <br>-->
+
+<!--    <p>{{ video.upload_name }}</p>-->
+<!--{% endfor %}-->
+<!--</body>-->
+<!--</html>-->
+
+{% load static %}
+{% block content %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+<section class="main">
+<div class="main-div">
+        <table border="1" class="table table-hover" style="font-size:18px;text-align:center;align-item:center;justify-content:center;vertical-align: middle;">
+    <tr><th>videos</th>
+    <th>name of the video</th>
+<!--    <th>address</th>-->
+<!--    <th>password</th>-->
+<!--    <th>uploads</th>-->
+        <th>accept</th>
+        <th>reject</th>
+<!--        <th colspan="2">operations</th>-->
+    </tr>
+
+{% for i in users %}
+
+    <tr>
+
+        <td><video width="300px" height="200px" controls>
+    <source src="{{ video.upload_videos.url }}" type="video/mp4" ></video></td>
+
+         <td>{{i.upload_name}}</td>
+<!--         <td>{{i.address}}</td>-->
+<!--         <td>{{i.password}}</td>-->
+<!--         <td>{{i.uploads}}</td>-->
+<!--         <td>{{i.accept}}</td>-->
+<!--        <td>{{i.reject}}</td>-->
+
+    <td><a class="btn btn-success" href="{% url 'uploads_edit' login_id i.video_id  %}">Edit</a></td>
+    <td><a class="btn btn-danger" href="{% url 'delete' login_id i.video_id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+   </table>
+</div></section>
+
+<!--{% endblock content %}-->

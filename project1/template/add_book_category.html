@@ -1,0 +1,38 @@
+{% extends 'admin_nav.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+{% load static %}
+<head>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+{% block content %}
+<section class="main">
+        <center>
+    <div class="col-xs-12"  style="padding:10px;">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <div class="alert alert-warning" role="alert" style="width:50%;">
+                <li style="list-style-type: none;" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            </div>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    </center>
+    <div class="main-div">
+        <div class="reg_form">
+            <form action="" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form_key %}
+                <!--            {% bootstrap_button button_type="submit" content="OK" %}-->
+                <input class="btn btn-outline-success mx-auto d-grid gap-2 col-6" type="submit" value="Add">
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

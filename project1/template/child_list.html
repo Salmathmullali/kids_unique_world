@@ -1,0 +1,57 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+{% load static %}
+
+<h1>HI</h1>
+{% for i in page_obj %}
+<div style="width:700px; justify-content:center;align-item:center; ">
+            <div class="mb-3">
+                <label class="img-rounded"><b>Profile</b></label><br>
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Id</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{i.child_id}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Name</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{i.firstname}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Phone Number</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{i.lastname}}">
+            </div>
+<!--            <div class="mb-3">-->
+<!--                <label class="form-label">Email</label>-->
+<!--                <input class="form-control" style="background-color:white;" disabled type="text" value="{{users.email}">-->
+<!--            </div>-->
+            <div class="mb-3">
+                <label class="form-label"><b>Password</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="password" value="{{i.password}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Phone</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="text" value="{{i.phone}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Email</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="email" value="{{i.email}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Age</b></label>
+                <input class="form-control" style="background-color:white;" disabled type="email" value="{{i.age}}">
+            </div>
+
+            <div class="mb-3">
+                <a class="btn btn-outline-success mx-auto d-grid gap-2 col-6"
+                   href="{% url 'child_edit' login_id %}"> Edit</a>
+            </div>
+</div>
+{% include 'pagination.html' %}
+{% endfor %}
+{% endblock content %}

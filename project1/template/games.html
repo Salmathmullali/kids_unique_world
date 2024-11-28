@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+{% load static %}
+{% for i in users %}
+
+        <img src="{{i.upload_game.url}}" alt="" width="100px" height="100px">
+            {{i.upload_name}}
+
+    {% endfor %}
+
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <title>Kider - Preschool Website Template</title>-->
+<!--    <meta content="width=device-width, initial-scale=1.0" name="viewport">-->
+<!--    <meta content="" name="keywords">-->
+<!--    <meta content="" name="description">-->
+
+<!--    &lt;!&ndash; Favicon &ndash;&gt;-->
+<!--    <link href="{% static 'img/favicon.ico' %}" rel="icon">-->
+
+<!--    &lt;!&ndash; Google Web Fonts &ndash;&gt;-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Icon Font Stylesheet &ndash;&gt;-->
+<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Libraries Stylesheet &ndash;&gt;-->
+<!--    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">-->
+<!--    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Customized Bootstrap Stylesheet &ndash;&gt;-->
+<!--    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">-->
+
+<!--    &lt;!&ndash; Template Stylesheet &ndash;&gt;-->
+<!--    <link href="{% static 'css/style.css' %}" rel="stylesheet">-->
+<!--</head>-->
+
+<!--<body>-->
+
+<!--    <div class="container-xxl bg-white p-0">-->
+
+
+<!--<div class="container-xxl py-5">-->
+<!--            <div class="container">-->
+<!--                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">-->
+<!--                    <h1 class="mb-3"></h1>-->
+<!--&lt;!&ndash;                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="row g-4">-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images13.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="{% url 'book_display' login_id  %}">Books</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href=""></span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images14.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="{% url 'video_display' login_id  %}">Videos</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images15.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="{% url 'games' login_id  %}">Games</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images4.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="">Reminder</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images16.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="">Activities</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images6.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="">Settings</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container-xxl py-5">-->
+<!--            <div class="container">-->
+<!--                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">-->
+<!--                    <h1 class="mb-3"></h1>-->
+<!--&lt;!&ndash;                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="row g-4">-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images7.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="{% url 'book_display' login_id  %}">Books</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href=""></span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images8.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="{% url 'video_display' login_id  %}">Videos</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images9.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="{% url 'games' login_id  %}">Games</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images11.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="">Reminder</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images10.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="">Activities</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class=""></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">-->
+<!--                        <div class="classes-item">-->
+<!--                            <div class="">-->
+<!--                                <img class="" src="{% static 'img/images12.jpg' %}" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="">-->
+<!--                                <a class="" href="">Settings</a>-->
+<!--                                <div class="">-->
+<!--                                    <div class="">-->
+<!--                                        <img class="">-->
+<!--                                        <div class="ms-3">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--&lt;!&ndash;                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="row g-1">-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-primary mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-success mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-4">-->
+<!--                                        <div class="">-->
+<!--                                            <h6 class="text-warning mb-1"></h6>-->
+<!--                                            <small></small>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--</body>-->
+
+<!--</html>-->

@@ -1,0 +1,8 @@
+
+{% load static %}
+
+    {% for i in users %}
+
+           <p>Alternative text - include a link <a href="{{ i.upload_book.url }}">to the PDF!</a></p>
+            {{i.upload_name}}
+    {% endfor %}

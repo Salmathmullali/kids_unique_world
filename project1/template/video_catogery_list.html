@@ -1,0 +1,33 @@
+{% extends 'admin_nav.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+{% load static %}
+<head>
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+</head>
+{% block content %}
+<section class="main">
+    <div class="main-div">
+        <table border="1" class="table table-striped">
+            <tr>
+                <th>Category Id</th>
+                <th>Category</th>
+                <th colspan="2">Operation</th>
+            </tr>
+            {% for i in page_obj %}
+            <tr>
+                <td>{{i.category_id}}</td>
+                <td>{{i.category_name}}</td>
+                <td><a class="btn btn-success" href="{% url 'edit_category' login_id i.video_category_id %}">Edit</a></td>
+                <td><a class="btn btn-danger" href="{% url 'delete_category' login_id i.video_category_id %}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+    <center>{% include "pagination.html" %}</center>
+</section>
+{% endblock content %}

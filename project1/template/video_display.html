@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for video in users %}
+    <h1>Video Player</h1>
+    <video width="400" height="260" controls>
+    <source src="{{ video.upload_videos.url }}" type="video/mp4">
+    Your browser does not support the video tag.
+        <p>View Count: {{ video.view_count }}</p>
+<video controls>
+    <source src="{{ video.video_file.url }}" type="video/mp4">
+    Your browser does not support the video tag.
+
+</video>
+    <br>
+    <br>
+
+    <p>{{ video.upload_name }}</p>
+{% endfor %}
+</body>
+</html>

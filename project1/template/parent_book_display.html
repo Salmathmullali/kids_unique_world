@@ -1,0 +1,43 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--{% load static %}-->
+
+<!--    {% for i in users %}-->
+
+<!--           <p>Alternative text - include a link <a href="{{ i.upload_book.url }}">to the PDF!</a></p>-->
+<!--            {{i.upload_name}}-->
+<!--    {% endfor %}-->
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+<section class="main">
+<div class="main-div">
+        <table border="1" class="table table-hover" style="font-size:18px;text-align:center;align-item:center;justify-content:center;vertical-align: middle;">
+    <tr><th>videos</th>
+    <th>name of the video</th>
+<!--    <th>address</th>-->
+<!--    <th>password</th>-->
+<!--    <th>uploads</th>-->
+        <th>accept</th>
+        <th>reject</th>
+<!--        <th colspan="2">operations</th>-->
+    </tr>
+
+{% for i in users %}
+
+    <tr>
+
+        <td><a href="{{ i.upload_book.url }}"></a></td>
+            <td>{{i.upload_name}}</td>
+    {% endfor %}
+        <td><a class="btn btn-danger" href="{% url 'book_delete' login_id i.book_id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+   </table>
+</div></section>
+
+{% endblock content %}
